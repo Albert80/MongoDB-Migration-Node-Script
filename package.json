@@ -1,0 +1,22 @@
+{
+  "name": "mongodb-migration-node-script",
+  "version": "1.0.0",
+  "description": "\"Async migration data app\"",
+  "main": "migrate-data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Albert80/MongoDB-Migration-Node-Script.git"
+  },
+  "author": "César Alberto Trejo Juárez > cesaratj27@gmail.com > https://github.com/Albert80",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Albert80/MongoDB-Migration-Node-Script/issues"
+  },
+  "homepage": "https://github.com/Albert80/MongoDB-Migration-Node-Script#readme",
+  "dependencies": {
+    "mongodb": "^3.0.7"
+  }
+}
