@@ -35,7 +35,7 @@ MongoClient.connect(url, (err, client) => {
 				db.collection(collect).insert(db1.splice(0, limit), 
 					(error, result) =>{
 						if (error) return process.exit(1)
-						console.log(`Adding ${limit} elements from ${index}`)
+						console.log(`Adding ${limit} elements from index: ${index}`)
 				})
 			});
 		}
