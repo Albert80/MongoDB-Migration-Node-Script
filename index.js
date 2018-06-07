@@ -31,11 +31,12 @@ MongoClient.connect(url, (err, client) => {
 		db1[index] = Object.assign(customer, db2[index]);
 
 		if(index % limit == 0){
-			tasks.push( () => {
+			tasks.push( (done) => {
 				db.collection(collect).insert(db1.splice(0, limit), 
-					(error, result) =>{
+					(error, results) =>{
 						if (error) return process.exit(1)
 						console.log(`Adding ${limit} elements from index: ${index}`)
+						done(error, results)
 				})
 			});
 		}
@@ -47,7 +48,7 @@ MongoClient.connect(url, (err, client) => {
 		console.log('Async parallel finishing...');
 		const endTime = Date.now();
 		console.log(`Execution time: ${endTime-startTime}`);
-		console.log(results);
+		//console.log(results);
 	});
 	
 	client.close();
